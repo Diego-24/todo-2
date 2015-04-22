@@ -3,6 +3,8 @@
 <head>
 	<title>Diego's To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
 	<div class="wrap">
@@ -34,7 +36,7 @@
 		</form>
 	</div>
 </body>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 		add_task();
 
@@ -56,7 +58,7 @@
 			var current_element = $(this);
 			var task_id = $(this).attr['id'];
 
-			$.post('includes/delete-task.php'. {id: task_id}, function(){
+			$.post('includes/delete-task.php', {id: task_id}, function(){
 				current_element.parent().fadeOut("fast", function(){
 					$(this).remove();
 				});
