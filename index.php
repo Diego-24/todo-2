@@ -3,10 +3,14 @@
 <head>
 	<title>Diego's To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
+	<div>
+		<?php
+			require_once(__DIR__ . "/view/login-form.php");
+			require_once(__DIR__ . "/view/register-form.php");
+		?>
+	</div>
 	<div class="wrap">
 		<div class="task-list">
 			<ul>
@@ -18,7 +22,7 @@
 						if ($numrows>0) {
 							while ($row = $result->fetch_assoc()) {
 								$task_id = $row['id'];
-								$task_name = $row["task"];
+								$task_name = $row['task'];
 
 								echo '<li>
 								<span>'.$task_name. '</span>
@@ -41,22 +45,22 @@
 		add_task();
 
 		function add_task(){
-			$('_add-new-task').submit(function() {
+			$('.add-new-task').submit(function() {
 				var new_task = $('.add-new-task input[name=new-task]').val();
 			
 				if (new_task != '') {
-					$.post('includes/add-task.php', {task: new_task}, function(data) {
+					$.post('includes/add-task.php', { task: new_task }, function(data) {
 						$('add-new-task input[name=new-task]').val();
-							$(data).appendTo('task-list ul').hide().fadeIn();
+						$(data).appendTo('.task-list ul').hide().fadeIn();
 					});
 				}
 				return false;
-			})
+			});
 		}
 
 		$('.delete-button').click(function(){
 			var current_element = $(this);
-			var task_id = $(this).attr['id'];
+			var task_id = $(this).attr('id');
 
 			$.post('includes/delete-task.php', {id: task_id}, function(){
 				current_element.parent().fadeOut("fast", function(){
