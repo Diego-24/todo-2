@@ -5,7 +5,13 @@
 <h1>Register</h1>
 
 <!--creates a path-->
+<link rel="stylesheet" type="text/css" href="css/register.css">
 <form method="post" action="<?php echo $path . "controller/create-user.php"; ?>">
+	<div>
+		<label for="email">Email: </label>
+		<input type="text" name="email" />
+	</div>
+
 	<div>
 		<!--creates a slot for the user's username-->
 		<label for="username">Username: </label>

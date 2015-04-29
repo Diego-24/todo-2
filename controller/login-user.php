@@ -3,15 +3,14 @@
 
 	$username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
 	$password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
-
-	$query = $_SESSION["connection"]->query("SELECT salt, password FROM tasks WHERE username = '$username'");
+	$query = $_SESSION["connection"]->query("SELECT * FROM listusers WHERE username = '$username'");
 
 	if($query->num_rows == 1) {
 		$row = $query->fetch_array();
 
 		if($row["password"] === crypt($password, $row["salt"])) {
 			$_SESSION["authenticated"] = true;
-			echo "<p>Login Successful!</p>";
+			$_SESSION["name"] = $username;
 		}
 		else {
 			echo "<p>invalid username and password</p>";

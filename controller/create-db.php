@@ -9,7 +9,7 @@
 		. "PRIMARY KEY (id))");
 	
 	/*creates another table*/
-	$query = $_SESSION["connection"]->query("CREATE TABLE tasks("
+	$query = $_SESSION["connection"]->query("CREATE TABLE listusers ("
 			. "id int(11) NOT NULL AUTO_INCREMENT,"
 			. "username varchar(30) NOT NULL,"
 			. "password char(128) NOT NULL,"
