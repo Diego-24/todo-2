@@ -21,6 +21,7 @@
 		if($query) {
 			$_SESSION["name"] = $username;
 			echo "Successfully created user: $username";
+			header("Location: " . $path . "index.php");
 		}
 		else{
 			echo "<p>" . $_SESSION["connection"]->error . "</p>";

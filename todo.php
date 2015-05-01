@@ -6,13 +6,7 @@
 	<title>Diego's To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<header>
-	<button type="button">
-		<a href="<?php echo $path . "register.php";?>">Register</a>
-	</button>
-	<button type="button">
-		<a href="<?php echo $path . "login.php";?>">Login</a>
-	</button>
+<header class="logout">
 	<button type="button">
 		<a href="<?php echo $path . "controller/logout-user.php";?>">Logout</a>
 	</button>
