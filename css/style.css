@@ -8,6 +8,8 @@ body{
 .login-register{
 	background: #F6E3CE;
 	margin: 200px;
+	padding-top: 20px;
+	padding-bottom: ;
 	font-size: 40px;
 	text-align: center;
 	border-radius: 50px;
@@ -21,11 +23,49 @@ body{
 	opacity: 0.9;
 	font-size: 23px;
 	
+	
 }
 
 .label{
 	text-align: left;
 }
+
+footer{
+	
+}
+
+.button {
+	margin: 20px;
+   border-top: 1px solid #ffffff;
+   background: #81ff75;
+   background: -webkit-gradient(linear, left top, left bottom, from(#abfcab), to(#81ff75));
+   background: -webkit-linear-gradient(top, #abfcab, #81ff75);
+   background: -moz-linear-gradient(top, #abfcab, #81ff75);
+   background: -ms-linear-gradient(top, #abfcab, #81ff75);
+   background: -o-linear-gradient(top, #abfcab, #81ff75);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 22px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #038c8a;
+   background: #038c8a;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #385d63;
+   background: #385d63;
+   }
 
 @media screen and (max-width: 959px) {
   body{

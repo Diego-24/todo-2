@@ -3,7 +3,7 @@
 		require_once(__DIR__ . "/../model/config.php");
 	?>
 
-	<h1>Login</h1>
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<form method="post" action="<?php echo $path . "controller/login-user.php"?>">
 	
@@ -20,10 +20,13 @@
 
 		<div>
 			<!--creates a submit button-->
-			<button type="submit">Submit</button>
+			<button class="button" type="submit">Login</button>
 		</div>
+		<footer>
+			<button class="button" type="button">
+				<a href="<?php echo $path . "register.php";?>">Sign Up</a>
+			</button>
+		</footer>
 	</form>
-	<?php
-		require_once(__DIR__ . "/../view/footer.php");
-	?>
+	
 </div>

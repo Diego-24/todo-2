@@ -3,7 +3,7 @@
 		require_once(__DIR__ . "/../model/config.php");
 	?>
 
-	<h1>Sign Up</h1>
+	
 
 	<!--creates a path-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -27,7 +27,7 @@
 
 		<div>
 			<!--creates a submit button-->
-			<button type="submit">Submit</button>
+			<button class="button" type="submit">Submit</button>
 		</div>
 	</form>
 </div>

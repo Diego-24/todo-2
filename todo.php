@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <header class="logout">
-	<button type="button">
+	<button type="button" >
 		<a href="<?php echo $path . "controller/logout-user.php";?>">Logout</a>
 	</button>
 </header>
@@ -37,7 +37,7 @@
 			</ul>
 		</div>
 		<form class="add-new-task" autocomplete="off">
-			<input type="text" name="new-task" placeholder="Add new item..."/>
+			<input type="text" name="new-task" placeholder="Add new task..."/>
 		</form>
 	</div>
 </body>
